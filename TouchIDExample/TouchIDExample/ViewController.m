@@ -41,9 +41,7 @@
                               
                               // Check if the user authentication is correct
                               if(success) {
-                                  [self showMessageWithTitle:@"Success"
-                                                     message:@"Welcome"
-                                              andButtonTitle:@"Continue"];
+                                  NSLog(@"Success - Welcome, you were logged in successfully !!!");
                               }
                               else {
                                   switch (error.code) {
