@@ -41,7 +41,12 @@
                               
                               // Check if the user authentication is correct
                               if(success) {
-                                  NSLog(@"Success - Welcome, you were logged in successfully !!!");
+                                  dispatch_async(dispatch_get_main_queue(), ^{
+                                      [self showMessageWithTitle:@"Success"
+                                                         message:@"Welcome, you're logged in successfully!!"
+                                                  andButtonTitle:@"OK"];
+                                      NSLog(@"Success - Welcome, you were logged in successfully !!!");
+                                  });
                               }
                               else {
                                   switch (error.code) {
